@@ -16,6 +16,7 @@ app.get('/', (req, res) => {
         if (err) {
           console.error('Error parsing XML:', err);
           res.status(500).send('Error parsing XML');
+          console.log();
         } else {
           // Navigate to the required nodes and check/modify attributes
           if (result.yml_catalog && result.yml_catalog.shop && result.yml_catalog.shop[0]) {
